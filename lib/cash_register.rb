@@ -1,7 +1,7 @@
 class CashRegister
   attr_accessor
 
-  def initialize(emp_disc)
+  def initialize(emp_disc = 0.2)
     @last_item = 0
     @total = 0
     @item_list = []
