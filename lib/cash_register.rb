@@ -16,7 +16,9 @@ class CashRegister
     item_total = (price * quantity).round(2)
     @total += item_total
     @last_item = item_total
-    @item_list << item
+    quantity.times do 
+      @item_list << item
+    end 
   end
 
   def items
