@@ -5,7 +5,7 @@ class CashRegister
     @last_item = 0
     @total = 0
     @item_list = []
-    @emp_disc = emp_disc
+    @emp_disc = emp_disc / 100.00
   end
 
   def total
@@ -26,8 +26,7 @@ class CashRegister
   end
 
   def apply_discount
-    # emp_disc = 0.2
-    @total -= (total * (@emp_disc / 100.00))
+    @total -= (total * @emp_disc)
     @total == 0 ? "There is no discount to apply." : "After the discount, the total comes to $#{@total.floor}."
   end
 
