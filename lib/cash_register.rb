@@ -1,7 +1,7 @@
 class CashRegister
   attr_accessor
 
-  def initialize(emp_disc = .2)
+  def initialize(emp_disc = 0.2)
     @last_item = 0
     @total = 0
     @item_list = []
@@ -31,4 +31,4 @@ class CashRegister
     @total -= @last_item
   end
 
-end 
+end
