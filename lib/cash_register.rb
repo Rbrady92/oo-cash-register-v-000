@@ -28,7 +28,7 @@ class CashRegister
   def apply_discount
     emp_disc = 0.2
     @total -= (total * emp_disc)
-    return "After the discount, the total comes to $#{@total}."
+    return "After the discount, the total comes to $#{@total.floor}."
   end
 
   def discount
