@@ -1,7 +1,7 @@
 class CashRegister
   attr_accessor
 
-  def initialize(emp_disc = 0.2)
+  def initialize(emp_disc = 20)
     @last_item = 0
     @total = 0
     @item_list = []
@@ -25,6 +25,10 @@ class CashRegister
 
   def apply_discount
 
+  end
+
+  def discount
+    @emp_disc
   end
 
   def void_last_transaction
