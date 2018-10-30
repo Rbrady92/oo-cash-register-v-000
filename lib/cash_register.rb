@@ -1,7 +1,7 @@
 class CashRegister
   attr_accessor :total, :items
 
-  def initialize(emp_disc = 20)
+  def initialize(emp_disc = 20.00)   #should just be given in decimal form
     @last_item = 0
     @total = 0
     @item_list = []
