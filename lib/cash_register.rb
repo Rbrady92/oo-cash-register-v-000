@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor
+  attr_accessor :total
 
   def initialize(emp_disc = 20)
     @last_item = 0
