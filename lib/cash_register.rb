@@ -26,8 +26,8 @@ class CashRegister
   end
 
   def apply_discount
-    emp_disc = 0.2
-    @total -= (total * emp_disc)
+    # emp_disc = 0.2
+    @total -= (total * (@emp_disc / 100))
     @total == 0 ? "There is no discount to apply." : "After the discount, the total comes to $#{@total.floor}."
   end
 
@@ -37,6 +37,7 @@ class CashRegister
 
   def void_last_transaction
     @total -= @last_item
+    #also would need to remove item/quantity from list but no tests
   end
 
 end
